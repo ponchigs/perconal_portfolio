@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Контакты — Портфолио</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/nav.js" defer></script>
+</head>
+<body>
+  
+<header class="site-header">
+  <a href="index.html" class="logo-link">
+    <img src="images/logo.png" alt="Логотип" class="logo" width="160">
+  </a>
+  <nav class="main-nav" id="mainNav">
+    <a href="index.html">Главная</a>
+    <a href="about.html">Обо мне</a>
+    <a href="portfolio.html">Работы</a>
+    <a href="contact.html">Контакты</a>
+    <a href="feedback.html">Отзыв</a>
+    <a href="algorithm.html">Задача</a>    
+    <a href="convert.html">Паспорт</a>
+    <a href="https://github.com/ponchigs/ponchigs_portfolio" target="_blank" rel="noopener">Мой GitHub</a>
+  </nav>
+</header>
+
+  <main>
+    <h1>Связаться со мной</h1>
+    <form action="https://ya.ru/search?">
+      <label>Фамилия: <input type="text" name="surname" required></label><br>
+      <label>Имя: <input type="text" name="name" required></label><br>
+      <label>Группа: <input type="text" name="group" value="Группа-1"></label><br>
+      <label>Телефон: <input type="tel" name="phone" placeholder="+7-900-000-0000"></label><br>
+      <label>Email: <input type="email" name="email"></label><br>
+      <label>Дата отправки: <input type="date" name="send_date"></label><br>
+      <button type="submit">Отправить</button>
+    </form>
+    <script>
+      const d=document.querySelector('input[name="send_date"]');
+      if(d) d.value = new Date().toISOString().slice(0,10);
+    </script>
+  </main>
+  
+<footer class="site-footer">
+  <p>© 2025 Андриенко Полина Алексеевна. Контрольная работа №1</p>
+</footer>
+
+</body>
+</html>

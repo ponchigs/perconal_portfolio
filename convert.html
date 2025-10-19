@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Кириллица → латиница</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/nav.js" defer></script>
+</head>
+<body>
+  
+<header class="site-header">
+  <a href="index.html" class="logo-link">
+    <img src="images/logo.png" alt="Логотип" class="logo" width="160">
+  </a>
+  <nav class="main-nav" id="mainNav">
+    <a href="index.html">Главная</a>
+    <a href="about.html">Обо мне</a>
+    <a href="portfolio.html">Работы</a>
+    <a href="contact.html">Контакты</a>
+    <a href="feedback.html">Отзыв</a>
+    <a href="algorithm.html">Задача</a>     
+    <a href="convert.html">Паспорт</a>
+    <a href="https://github.com/ponchigs/ponchigs_portfolio" target="_blank" rel="noopener">Мой GitHub</a>
+  </nav>
+</header>
+
+<head>
+      <meta charset = "utf8">
+      <link rel = "stylesheet" href = "css/passport.css">
+
+  <link rel = "preconnect" href = "https://fonts.googleapis.com">
+  <link rel = "preconnect" href = "https://fonts.gstatic.com" cressorigin>
+  <link href = "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@100;200;300;400;500;600;700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Poiret+One&diplay=swap" rel="stylesheet">
+  <style>
+
+   </style>
+</head>
+
+  <main>
+<h3 id = "console" class = "course-title"> Изменяем кириллицу на латиницу по клику </h3>
+<h3 id = "passport" >Паспорт</h3>
+  <div id = "main_fon"> 
+
+            <h5 id = "pass_title" class = "poiret-one-regular">РОССИЙСКАЯ ФЕДЕРАЦИЯ</h5>
+            <div id = "page_top">
+                <p class = "vidanstr1"> УМВД РОССИИ </p>
+                <p class = "vidanstr2">ПО ХМАО - ЮГРЕ</p>
+                <p class = "vidanstrdata">12.12.2012</p>
+                <p class = "vidanstrcode">123-123</p>
+                <img class = "podpis" src = "images/podpis1.png">
+                <img class = "podpis1" src = "images/podpis.png">
+            </div>
+
+            <div id = "page_bottom">
+                <img class = "passfoto" src = "images/foto.jpg">
+                <p class = "hfamilia">АНДРИЕНКО</p>
+                <p class = "hname">ПОЛИНЫ</p>
+                <p class = "hfname">АЛЕКСЕЕВНЫ</p>
+                <p class = "hpol">ЖЕН.</p>
+                <p class = "hborn">30.09.2004</p>
+                <p class = "hpborn1">Г. СУРГУТ</p>
+                <p class = "hpborn2">ТЮМЕНСКАЯ ОБЛ.</p>
+            </div> 
+        </div>
+
+           <button type = "button" class = "button"> Править </button>
+
+
+<h3 id = "console" class = "course-title"> DOM_JS. Считываем информацию из DOM </h3>
+        <img src = "images/passportconsole.jpg" height = "500px" >
+        <script src = "js/passport.js">
+document.addEventListener('DOMContentLoaded', function() {
+    
+});
+</script>
+  </main>
+  
+<footer class="site-footer">
+  <p>© 2025 Андриенко Полина Алексеевна. Контрольная работа №1</p>
+</footer>
+
+  <script>
+    const map = { 'А':'A','Б':'B','В':'V','Г':'G','Д':'D','Е':'E','Ё':'YO','Ж':'ZH','З':'Z','И':'I','Й':'Y','К':'K','Л':'L','М':'M','Н':'N','О':'O','П':'P','Р':'R','С':'S','Т':'T','У':'U','Ф':'F','Х':'KH','Ц':'TS','Ч':'CH','Ш':'SH','Щ':'SHCH','Ъ':'\'', 'Ы':'Y','Ь':'\'','Э':'E','Ю':'YU','Я':'YA', 'а':'a','б':'b','в':'v','г':'g','д':'d','е':'e','ё':'yo','ж':'zh','з':'z','и':'i','й':'y','к':'k','л':'l','м':'m','н':'n','о':'o','п':'p','р':'r','с':'s','т':'t','у':'u','ф':'f','х':'kh','ц':'ts','ч':'ch','ш':'sh','щ':'shch','ъ':'\'','ы':'y','ь':'\'','э':'e','ю':'yu','я':'ya' };
+    const translit = s => s.split('').map(c=>map[c]||c).join('');
+    document.getElementById('go').addEventListener('click',()=>{
+      document.querySelectorAll('.to-translit').forEach(el=>{
+        el.textContent = translit(el.textContent);
+      });
+    });
+  </script>
+</body>
+</html>
