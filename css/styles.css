@@ -17,12 +17,5 @@ figcaption{ color:var(--muted); font-size:0.9rem; }
 .anchor-nav{ margin:12px 0; font-size:.95rem; }
 table a{color: #ffcc00; text-decoration: none;}
 table a:hover {color: #ffd633; text-decoration: underline;}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  gap: 20px;
-}
-figure {
-  text-align: center;
-}
+.grid {display: grid; grid-template-columns: repeat(3, 1fr); justify-items: center; gap: 20px;}
+figure {text-align: center;}
