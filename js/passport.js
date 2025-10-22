@@ -1,5 +1,3 @@
-let button = document.querySelector('.button');
-
    function transliterate(text) {
             const translitMap = {
                 'А': 'A', 'Б': 'B', 'В': 'V', 'Г': 'G', 'Д': 'D', 'Е': 'E', 'Ё': 'YO',
